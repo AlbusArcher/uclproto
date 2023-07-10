@@ -2,7 +2,10 @@ cmake_minimum_required(VERSION 3.18)
 
 project(uclproto C CXX)
 
-set(THIRD_DIR ${PROJECT_SOURCE_DIR}/third)
+if (NOT DEFINED THIRD_DIR)
+    set(THIRD_DIR ${PROJECT_SOURCE_DIR}/third)
+endif()
+message("THIRD_DIR: ${THIRD_DIR}")
 
 include_directories(SYSTEM ${THIRD_DIR}/include)
 link_directories(${THIRD_DIR}/lib)
