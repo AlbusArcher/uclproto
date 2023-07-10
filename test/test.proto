@@ -1,0 +1,37 @@
+syntax = "proto2";
+
+package test;
+
+message TestEnum {
+    enum Enum {
+        UNKNOWN = 0;
+        OK = 1;
+        ERR = 2;
+    }
+}
+
+message TestBase {
+    required int32 field_int32 = 1;
+    required int64 field_int64 = 2;
+    required string field_string = 3;
+    required double field_double = 4;
+    required float field_float = 5;
+    required TestEnum.Enum field_enum = 6;
+    required bool field_bool = 7;
+}
+
+message TestRepeat {
+    repeated int32 field_int32 = 1;
+    repeated int64 field_int64 = 2;
+    repeated string field_string = 3;
+    repeated double field_double = 4;
+    repeated float field_float = 5;
+    repeated TestEnum.Enum field_enum = 6;
+    repeated bool field_bool = 7;
+}
+
+message TestNest {
+    required TestBase tb = 1;
+    repeated TestRepeat rtb = 2;
+}
+

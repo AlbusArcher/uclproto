@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+bin/*
+build/*
+test/*.pb.*
+test/Testing
+test/build/*
+!test/build/*.config
+

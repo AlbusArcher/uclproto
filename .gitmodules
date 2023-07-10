@@ -1,0 +1,9 @@
+[submodule "protobuf"]
+	path = third_src/protobuf
+	url = https://github.com/protocolbuffers/protobuf.git
+[submodule "libucl"]
+	path = third_src/libucl
+	url = https://github.com/vstakhov/libucl.git
+[submodule "gtest"]
+	path = third_src/gtest
+	url = https://github.com/google/googletest.git
